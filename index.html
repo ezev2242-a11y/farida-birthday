@@ -1,0 +1,691 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff4f2">
+<title>For Farida Nasir ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Parisienne&display=swap');
+
+:root {
+  --rose: #b65e75;
+  --deep: #743b50;
+  --pink: #f9e4e7;
+  --cream: #fff8f3;
+  --text: #553b45;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+button { font: inherit; cursor: pointer; }
+
+button:focus-visible {
+  outline: 3px solid var(--deep);
+  outline-offset: 4px;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+section {
+  padding: 90px 22px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: .72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--rose);
+  font-weight: 700;
+}
+
+.script {
+  font-family: 'Parisienne', cursive;
+  color: var(--rose);
+}
+
+.btn {
+  border: 0;
+  background: var(--deep);
+  color: white;
+  padding: 15px 26px;
+  border-radius: 50px;
+  transition: transform .25s, background .25s;
+  box-shadow: 0 8px 24px #743b5025;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: #8b4960;
+}
+
+.btn-light {
+  background: white;
+  color: var(--deep);
+  border: 1px solid #e8cbd1;
+  box-shadow: none;
+}
+
+/* Opening screen */
+
+#intro {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 20px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 15% 20%, #f3d1da 0, transparent 45%),
+    radial-gradient(ellipse at 90% 80%, #eed8d2 0, transparent 40%),
+    linear-gradient(135deg, #fffaf5, #fbe9eb);
+}
+
+#intro::before, #intro::after {
+  content: "✿";
+  position: absolute;
+  color: #b65e7530;
+  font-size: 150px;
+  pointer-events: none;
+}
+
+#intro::before {
+  top: 5%;
+  left: -30px;
+  transform: rotate(-25deg);
+}
+
+#intro::after {
+  bottom: 4%;
+  right: -30px;
+  transform: rotate(25deg);
+}
+
+.intro-card {
+  width: min(100%, 650px);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 50px 25px;
+  border: 1px solid #ffffffc9;
+  background: #ffffff8a;
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+  box-shadow: 0 25px 90px #9c52601a;
+  animation: float-in 1s ease both;
+}
+
+.small-heart {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: var(--rose);
+}
+
+.intro-card h1 {
+  font-size: clamp(2.8rem, 9vw, 5.2rem);
+  line-height: 1;
+  margin: 20px 0;
+  color: var(--deep);
+}
+
+.intro-card p {
+  line-height: 1.8;
+  max-width: 400px;
+  margin: 0 auto 28px;
+  color: #806570;
+}
+
+.intro-card .btn { margin-top: 10px; }
+
+.intro-note {
+  font-size: .75rem;
+  margin-top: 28px;
+  color: #9b7e86;
+}
+
+/* Main birthday experience */
+
+#birthday { display: none; }
+
+.hero {
+  min-height: 85svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 20px;
+  background:
+    radial-gradient(ellipse at 50% 40%, #f9e1e7 0, transparent 65%),
+    var(--cream);
+}
+
+.hero h1 {
+  font-size: clamp(3.6rem, 12vw, 7rem);
+  line-height: 1;
+  color: var(--deep);
+  margin: 20px 0;
+  animation: fade-up 1.2s ease both;
+}
+
+.hero .subtitle {
+  font-size: clamp(.95rem, 3vw, 1.1rem);
+  max-width: 460px;
+  line-height: 1.9;
+  color: #826570;
+  margin: 0 auto 30px;
+}
+
+.hero-date {
+  margin-top: 24px;
+  letter-spacing: 2px;
+  font-size: .78rem;
+  color: var(--rose);
+}
+
+.petal {
+  position: absolute;
+  top: -30px;
+  pointer-events: none;
+  opacity: .7;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to { transform: translateY(110svh) rotate(600deg); opacity: 0; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float-in {
+  from { opacity: 0; transform: translateY(20px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Countdown */
+
+.countdown-wrap {
+  padding: 30px 20px 65px;
+  background: #fffaf7;
+  text-align: center;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.time-box {
+  min-width: 72px;
+  padding: 16px 12px;
+  background: white;
+  border: 1px solid #f0dce0;
+  border-radius: 16px;
+}
+
+.time-box strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: var(--deep);
+}
+
+.time-box span {
+  font-size: .65rem;
+  letter-spacing: 1px;
+  color: #987985;
+}
+
+/* Letter */
+
+.letter-section { background: #f9e9e9; }
+
+.section-title {
+  font-size: clamp(2.3rem, 7vw, 3.6rem);
+  color: var(--deep);
+  margin: 15px 0;
+}
+
+.section-description {
+  max-width: 490px;
+  line-height: 1.9;
+  color: #876b75;
+  margin: 0 auto 35px;
+}
+
+.letter {
+  width: min(100%, 650px);
+  margin: 35px auto 0;
+  padding: clamp(25px, 6vw, 55px);
+  background: #fffaf3;
+  border-radius: 5px 25px 5px 25px;
+  border: 1px solid #ead5cc;
+  box-shadow: 0 18px 55px #85495712;
+  text-align: left;
+  line-height: 2;
+  display: none;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.letter.visible { display: block; animation: fade-up .7s ease both; }
+
+.letter .signature {
+  display: block;
+  font-family: 'Parisienne', cursive;
+  font-size: 2rem;
+  color: var(--rose);
+  margin-top: 20px;
+}
+
+/* Memories */
+
+.memories { background: var(--cream); }
+
+.gallery {
+  width: min(100%, 900px);
+  margin: 35px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.memory-card {
+  min-width: 0;
+  background: white;
+  padding: 10px 10px 18px;
+  box-shadow: 0 12px 35px #7b455012;
+  transform: rotate(-1deg);
+  transition: transform .3s;
+}
+
+.memory-card:nth-child(2) { transform: rotate(1.5deg); }
+.memory-card:nth-child(3) { transform: rotate(-.5deg); }
+.memory-card:hover { transform: rotate(0) translateY(-5px); }
+
+.memory-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background:
+    radial-gradient(ellipse at 30% 20%, #f8dce2, transparent 50%),
+    linear-gradient(145deg, #f0cbd4, #f9eae0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.memory-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.memory-photo .placeholder {
+  padding: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: var(--deep);
+}
+
+.memory-card p {
+  font-family: 'Parisienne', cursive;
+  font-size: 1.35rem;
+  margin-top: 12px;
+  color: var(--deep);
+}
+
+/* Final surprise */
+
+.final-section {
+  background: linear-gradient(145deg, #7b4056, #542e43);
+  color: #fff5f2;
+  overflow: hidden;
+}
+
+.final-section .eyebrow { color: #f4cbd5; }
+
+.final-section h2 {
+  font-size: clamp(2.7rem, 8vw, 4.8rem);
+  margin: 20px auto;
+}
+
+.final-section p {
+  line-height: 1.9;
+  max-width: 480px;
+  margin: 0 auto 28px;
+  color: #f0dbe2;
+}
+
+.final-section .btn {
+  background: #fff4f1;
+  color: var(--deep);
+}
+
+.secret {
+  display: none;
+  max-width: 520px;
+  margin: 30px auto 0;
+  padding: 25px;
+  border: 1px solid #ffffff40;
+  border-radius: 20px;
+  line-height: 2;
+  background: #ffffff0c;
+}
+
+.secret.visible { display: block; animation: fade-up .7s ease both; }
+
+footer {
+  background: #542e43;
+  color: #e7cbd4;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: .78rem;
+}
+
+footer span { color: #f4cbd5; }
+
+@media (max-width: 600px) {
+  section { padding: 70px 18px; }
+  .intro-card { padding: 40px 20px; }
+  .gallery { grid-template-columns: 1fr; max-width: 330px; gap: 25px; }
+  .memory-card { transform: none !important; }
+  .memory-photo { aspect-ratio: 4 / 3; }
+  .countdown { gap: 8px; }
+  .time-box { min-width: 64px; padding: 12px 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING SCREEN -->
+<div id="intro">
+  <div class="intro-card">
+    <div class="small-heart">♡</div>
+    <p class="eyebrow">A little something just for you</p>
+    <h1>For Farida<br><span class="script">Nasir</span></h1>
+    <p>
+      Some people make ordinary days feel extraordinary.
+      This little corner of the internet was made just for you.
+    </p>
+    <button class="btn" id="openBtn">Open your surprise ♡</button>
+    <p class="intro-note">Made with care, just for you.</p>
+  </div>
+</div>
+
+<!-- MAIN BIRTHDAY EXPERIENCE -->
+<main id="birthday">
+
+  <header class="hero" id="home">
+    <p class="eyebrow">Today is all about you</p>
+    <h1>Happy Birthday,<br><span class="script">Farida</span></h1>
+    <p class="subtitle">
+      A beautiful soul deserves a beautiful day.
+      May life give you a thousand reasons to smile.
+    </p>
+    <button class="btn" id="letterBtn">There's a letter for you ♡</button>
+    <p class="hero-date">13 · OCTOBER · 2026</p>
+  </header>
+
+  <div class="countdown-wrap">
+    <p class="eyebrow" id="countdownHeading">Counting down to your special day</p>
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div class="time-box"><strong>--</strong><span>DAYS</span></div>
+      <div class="time-box"><strong>--</strong><span>HOURS</span></div>
+      <div class="time-box"><strong>--</strong><span>MINUTES</span></div>
+      <div class="time-box"><strong>--</strong><span>SECONDS</span></div>
+    </div>
+  </div>
+
+  <!-- PERSONAL LETTER -->
+  <section class="letter-section" id="letterSection">
+    <p class="eyebrow">A few words from my heart</p>
+    <h2 class="section-title">For someone special</h2>
+    <p class="section-description">
+      Not everything meaningful needs a grand explanation.
+      Sometimes, a few honest words are enough.
+    </p>
+
+    <button class="btn" id="readBtn">Read your letter ♡</button>
+
+    <article class="letter" id="letter">
+      Farida,
+
+      Happy birthday to you. ❤️
+
+      Today is a reminder of how special you are
+      and how much you deserve to be celebrated.
+
+      I hope this new chapter brings you genuine
+      happiness, peace of mind, beautiful opportunities,
+      and the courage to pursue everything you dream of.
+
+      May you always find reasons to smile, people
+      who appreciate you, and moments that remind
+      you how beautiful life can be.
+
+      I hope today makes you feel appreciated,
+      cherished, and truly special.
+
+      You deserve beautiful things, Farida.
+      Never forget that.
+
+      Happy birthday, beautiful. ♡
+
+      <span class="signature">With love, from someone who cares.</span>
+    </article>
+  </section>
+
+  <!-- PHOTO MEMORIES -->
+  <section class="memories" id="memories">
+    <p class="eyebrow">Little moments, lovely memories</p>
+    <h2 class="section-title">A little gallery of you</h2>
+    <p class="section-description">
+      Every picture tells its own story.
+      Add your favourite pictures here to make this
+      part of the surprise truly personal.
+    </p>
+
+    <div class="gallery">
+      <div class="memory-card">
+        <div class="memory-photo">
+          <img src="photos/farida-1.jpg"
+               alt="Farida's favourite photo"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="placeholder" style="display:none">Your favourite photo ♡</span>
+        </div>
+        <p>A beautiful smile</p>
+      </div>
+
+      <div class="memory-card">
+        <div class="memory-photo">
+          <img src="photos/farida-2.jpg"
+               alt="A special memory"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="placeholder" style="display:none">A special memory ♡</span>
+        </div>
+        <p>Moments to remember</p>
+      </div>
+
+      <div class="memory-card">
+        <div class="memory-photo">
+          <img src="photos/farida-3.jpg"
+               alt="Another favourite photo"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="placeholder" style="display:none">Just being you ♡</span>
+        </div>
+        <p>Simply unforgettable</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL SURPRISE -->
+  <section class="final-section">
+    <p class="eyebrow">Before you go...</p>
+    <h2>One last little<br><span class="script">surprise</span></h2>
+    <p>
+      There's one more thing I want you to take
+      with you from this little experience.
+    </p>
+
+    <button class="btn" id="secretBtn">Open your final surprise ♡</button>
+
+    <div class="secret" id="secret" aria-live="polite">
+      <h3 style="font-size:2rem;margin-bottom:15px">
+        You are one of a kind, Farida. ♡
+      </h3>
+      <p>
+        May this new age bring you closer to your dreams,
+        surround you with genuine love, and give you
+        beautiful memories worth keeping forever.
+      </p>
+      <p style="margin-top:18px;font-family:'Parisienne',cursive;font-size:1.8rem">
+        Keep shining, beautiful.
+      </p>
+      <p style="margin-top:10px">Happy Birthday! 🎂</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with <span>♡</span> especially for Farida Nasir</p>
+    <p style="margin-top:8px">October 13, 2026</p>
+  </footer>
+</main>
+
+<script>
+const intro = document.getElementById('intro');
+const birthday = document.getElementById('birthday');
+
+document.getElementById('openBtn').addEventListener('click', () => {
+  intro.style.display = 'none';
+  birthday.style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  createPetals();
+  updateCountdown();
+});
+
+function createPetals() {
+  const hero = document.querySelector('.hero');
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const symbols = ['♡', '✿', '♥', '❀'];
+
+  for (let i = 0; i < 22; i++) {
+    const petal = document.createElement('span');
+    petal.className = 'petal';
+    petal.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    petal.style.left = Math.random() * 100 + '%';
+    petal.style.animationDuration = (7 + Math.random() * 9) + 's';
+    petal.style.animationDelay = (Math.random() * 5) + 's';
+    petal.style.fontSize = (12 + Math.random() * 18) + 'px';
+    petal.style.color = '#b65e75';
+    hero.appendChild(petal);
+    petal.addEventListener('animationend', () => petal.remove());
+  }
+}
+
+// Countdown uses the visitor's local time.
+const birthdayDate = new Date(2026, 9, 13, 0, 0, 0);
+
+function updateCountdown() {
+  const now = new Date();
+  const difference = birthdayDate.getTime() - now.getTime();
+  const heading = document.getElementById('countdownHeading');
+  const container = document.getElementById('countdown');
+
+  if (difference <= 0) {
+    heading.textContent = 'Today is your special day ♡';
+
+    if (now.toDateString() === birthdayDate.toDateString()) {
+      container.innerHTML =
+        '<h2 style="font-family:Cormorant Garamond,serif;font-size:2rem;color:#743b50">It is your birthday! 🎂</h2>';
+    } else {
+      container.innerHTML =
+        '<h2 style="font-family:Cormorant Garamond,serif;font-size:2rem;color:#743b50">The celebration continues ♡</h2>';
+    }
+    return;
+  }
+
+  const days = Math.floor(difference / 86400000);
+  const hours = Math.floor((difference % 86400000) / 3600000);
+  const minutes = Math.floor((difference % 3600000) / 60000);
+  const seconds = Math.floor((difference % 60000) / 1000);
+
+  const values = [days, hours, minutes, seconds];
+  const labels = ['DAYS', 'HOURS', 'MINUTES', 'SECONDS'];
+
+  container.innerHTML = values.map((value, index) =>
+    `<div class="time-box"><strong>${value}</strong><span>${labels[index]}</span></div>`
+  ).join('');
+}
+
+document.getElementById('letterBtn').addEventListener('click', () => {
+  document.getElementById('letterSection').scrollIntoView({
+    behavior: 'smooth'
+  });
+  setTimeout(() => {
+    document.getElementById('letter').classList.add('visible');
+  }, 400);
+});
+
+document.getElementById('readBtn').addEventListener('click', () => {
+  const letter = document.getElementById('letter');
+  letter.classList.toggle('visible');
+
+  document.getElementById('readBtn').textContent =
+    letter.classList.contains('visible')
+      ? 'Close your letter ♡'
+      : 'Read your letter ♡';
+});
+
+document.getElementById('secretBtn').addEventListener('click', () => {
+  const secret = document.getElementById('secret');
+  secret.classList.toggle('visible');
+
+  document.getElementById('secretBtn').textContent =
+    secret.classList.contains('visible')
+      ? 'Keep this moment close ♡'
+      : 'Open your final surprise ♡';
+});
+
+</script>
+</body>
+</html>
